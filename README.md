@@ -29,7 +29,8 @@
 index.htmlをクリック or php -S localhost:8080
 よりwebアクセス可能。
 
-![Uploading スクリーンショット 2025-07-09 13.09.40.png…]()
+<img width="1484" alt="スクリーンショット 2025-07-09 13 09 40" src="https://github.com/user-attachments/assets/a031e082-ef04-477c-bf1c-4389edc6b954" />
+
 
 ## APIキーについて
 
