@@ -1,8 +1,8 @@
-# ETA Map Calculator using OpenRouteService
+## ETA Map Calculator using OpenRouteService
 
 地図上で出発地点と目的地をクリックすることで、OpenRouteService APIを使って実際の道路ルートに沿ったETA（到着予想時刻）を計算・表示するWebアプリです。
 
-# 機能
+## 機能
 
 - 地図上での出発地点と目的地の選択
 - OpenRouteServiceを使った徒歩・自転車などのルート計算
@@ -11,14 +11,14 @@
 - Leaflet.jsによる地図UI
 
 
-# 使用技術
+## 使用技術
 
 - HTML / CSS / JavaScript
 - [Leaflet.js](https://leafletjs.com/)
 - [OpenRouteService API](https://openrouteservice.org/)
 - OpenStreetMapタイル
 
-# セットアップ方法
+## セットアップ方法
 
 1. このリポジトリをクローン
     ```bash
@@ -29,7 +29,8 @@
 index.htmlをクリック or php -S localhost:8080
 よりwebアクセス可能。
 
-# APIキーについて
+
+## APIキーについて
 
 - サイトにあるbasicapiを用いています
 - 過剰アクセスや商用利用には有料プランが必要です
