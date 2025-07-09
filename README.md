@@ -29,6 +29,7 @@
 index.htmlをクリック or php -S localhost:8080
 よりwebアクセス可能。
 
+![Uploading スクリーンショット 2025-07-09 13.09.40.png…]()
 
 ## APIキーについて
 
