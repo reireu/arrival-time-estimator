@@ -11,14 +11,14 @@
 - Leaflet.jsによる地図UI
 
 
-## 🛠️ 使用技術
+# 使用技術
 
 - HTML / CSS / JavaScript
 - [Leaflet.js](https://leafletjs.com/)
 - [OpenRouteService API](https://openrouteservice.org/)
 - OpenStreetMapタイル
 
-## 🔧 セットアップ方法
+# セットアップ方法
 
 1. このリポジトリをクローン
     ```bash
@@ -29,7 +29,7 @@
 index.htmlをクリック or php -S localhost:8080
 よりwebアクセス可能。
 
-## 🔑 APIキーについて
+# APIキーについて
 
 - サイトにあるbasicapiを用いています
 - 過剰アクセスや商用利用には有料プランが必要です
