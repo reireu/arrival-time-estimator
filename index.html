@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETA予測サービス - 時空間到着予測</title>
+    
+    <!-- Leaflet.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+          crossorigin=""/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <div class="container">
+        <div class="header">
+            <h1> ETA予測サービス</h1>
+            <p>あなた専用の到着時刻予測 - 自分の速度で正確なETAを算出</p>
+        </div>
+        
+        <div class="main-content">
+            <div class="map-section">
+                <h2 class="section-title">地図選択</h2>
+                <div id="map"></div>
+                <div class="status" id="status">地図を読み込んでいます...</div>
+            </div>
+            
+            <div class="controls-section">
+                <div class="control-group">
+                    <h3>移動手段</h3>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="transport" value="foot-walking" checked>
+                            <span>徒歩</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="transport" value="cycling-regular">
+                            <span>自転車</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="control-group">
+                    <h3> 移動速度設定</h3>
+                    <div class="speed-input">
+                        <input type="number" id="speed" min="1" max="50" value="4" step="0.1">
+                        <span>km/h</span>
+                    </div>
+                </div>
+                
+                <button class="calculate-btn" onclick="calculateETA()" disabled>
+                    ETA計算
+                </button>
+                
+                <div class="results" id="results">
+                    <div class="result-item">
+                        <span class="result-label">距離</span>
+                        <span class="result-value" id="distance">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">所要時間</span>
+                        <span class="result-value" id="duration">-</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-label">到着予定時刻</span>
+                        <span class="result-value" id="eta">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script> 
+</body>
+</html>

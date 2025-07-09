@@ -1,0 +1,252 @@
+/* 全体のリセットと基本的な設定は維持 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* 背景をより落ち着いた青〜グレーのグラデーションに変更 */
+    background: linear-gradient(135deg, #abb8c3 0%, #899bb0 100%); /* ライトグレーブルーからミディアムグレーブルー */
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fafbfd; /* 白からほんのり薄いグレーに変更 */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04); /* 影をより柔らかく */
+    overflow: hidden;
+}
+
+.header {
+    /* ヘッダーのグラデーションを青系統に統一 */
+    background: linear-gradient(135deg, #d4deff 0%, #4aaabd 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-weight: 700;
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    letter-spacing: 1.2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* 影を控えめに */
+}
+
+.header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px; /* 少しギャップを詰めてよりまとまりよく */
+    padding: 30px;
+}
+
+.map-section,
+.controls-section {
+    /* 背景色をより明るく、清潔感のあるグレーに */
+    background: #fdfdfd; /* ほぼ白に近いグレー */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04); /* セクションの影を柔らかく */
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #222; /* より濃く */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#map {
+    height: 500px;
+    border-radius: 12px;
+    border: 1px solid #e9e9e9; /* ボーダーを細く、より明るく */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 影を控えめに */
+}
+
+
+.status {
+    margin-top: 15px;
+    padding: 10px;
+    /* ステータスバーの背景色とボーダー色をメインカラーまたは警告色に連動 */
+    background: #eef7fc; /* 非常に薄い青 */
+    border-left: 4px solid #5c7ee0; /* ヘッダーの青に近い色 */
+    font-weight: 500;
+    color: #4a4a4a; /* 文字色も調整 */
+}
+
+.control-group {
+    margin-bottom: 25px;
+}
+
+.control-group h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0; /* 細いボーダーを追加 */
+}
+
+.radio-option:hover {
+    border-color: #5c7ee0; /* ヘッダーの青に近い色でホバー効果 */
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* 影を追加 */
+}
+
+.radio-option input[type="radio"] {
+    accent-color: #5c7ee0; /* ヘッダーの青に近い色でアクセント */
+}
+
+.speed-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0; /* 細いボーダーに変更 */
+}
+
+.speed-input input {
+    border: none;
+    font-size: 1.1em;
+    width: 80px;
+    text-align: center;
+}
+
+.speed-input input:focus {
+    outline: none;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 15px;
+    /* ボタンのグラデーションを全体の色合いに合わせて調整 */
+    background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%); /* 緑色を維持するなら彩度を落とすか、彩度高めでも少し深い緑に */
+    /* または、アクセントカラーを統一するなら: */
+    /* background: linear-gradient(135deg, #5c7ee0 0%, #4a69bd 100%); */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* 影を控えめに */
+}
+
+.calculate-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* ホバー時の影を少し濃く */
+}
+
+.calculate-btn:disabled {
+    background: #e0e0e0; /* 無効時の色をより明るいグレーに */
+    cursor: not-allowed;
+    color: #999; /* 文字色も調整 */
+}
+
+.results {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* 影を控えめに */
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f5f5f5; /* 区切り線をより薄く */
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 500;
+    color: #6a6a6a; /* 文字色を調整 */
+}
+
+.result-value {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.loading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5c7ee0; /* ヘッダーの青に近い色 */
+}
+
+.loading::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e0e0e0;
+    border-top: 2px solid #5c7ee0; /* ヘッダーの青に近い色 */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+    background: #ffeeee; /* より薄い赤系 */
+    border-left: 4px solid #ef5350; /* 少し落ち着いた赤 */
+    color: #d32f2f; /* 文字色を調整 */
+}
+
+.success {
+    background: #eefdeb; /* より薄い緑系 */
+    border-left: 4px solid #66bb6a; /* 少し落ち着いた緑 */
+    color: #388e3c; /* 文字色を調整 */
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    #map {
+        height: 400px;
+    }
+}
