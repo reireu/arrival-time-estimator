@@ -1,5 +1,7 @@
 ## ETA Map Calculator using OpenRouteService
 
+公開URL
+https://muds.gdl.jp/~s2322023
 地図上で出発地点と目的地をクリックすることで、OpenRouteService APIを使って実際の道路ルートに沿ったETA（到着予想時刻）を計算・表示するWebアプリです。
 
 ## 機能
